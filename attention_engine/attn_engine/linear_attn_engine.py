@@ -37,7 +37,7 @@ class LinearAttentionEngine:
         # exec(tl_code, globals(), local_vars)
         # globals().update(local_vars)
         # self.attention = local_vars["attention"]
-        code_hash = hashlib.md5(tl_code.encode()).hexdigest()
+        code_hash = hashlib.sha256(tl_code.encode()).hexdigest()
         cache_dir = os.path.join(os.path.dirname(__file__), "cache")
         file_path = os.path.join(cache_dir, f"{code_hash}.py")
         os.makedirs(cache_dir, exist_ok=True)
