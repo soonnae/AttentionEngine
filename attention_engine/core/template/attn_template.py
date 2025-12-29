@@ -28,5 +28,5 @@ class TlAttnTemplate:
 if __name__ == "__main__":
     tl_code = TlAttnTemplate()()
     print(tl_code)
-    exec(tl_code)
-    print(attention)
+    # exec(tl_code)  # Removed exec to prevent code injection vulnerability
+    # print(attention)  # Commented out because 'attention' is undefined without exec

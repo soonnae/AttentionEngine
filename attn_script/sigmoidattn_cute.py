@@ -52,7 +52,7 @@ custom_fwd_inputs = CustomIO({
     "softmax_bias": (1,),
 })
 
-def eval():
+def eval_function():
     import itertools
     BHSD = list(
         itertools.product(
@@ -97,5 +97,4 @@ if __name__ == "__main__":
 
     # from benchmark.bench_utils import do_bench_sigmoidattn_cute
     # do_bench_sigmoidattn_cute(mod, B, H, S, D, D, dtype=torch.bfloat16)
-    eval()
-
+    eval_function()
